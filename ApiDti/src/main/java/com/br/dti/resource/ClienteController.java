@@ -7,7 +7,8 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.ObjectError;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,6 +26,7 @@ import com.br.dti.util.converter.Converter;
 
 @RestController
 @RequestMapping("/api/clientes")
+@CrossOrigin(origins = "*")
 public class ClienteController {
 	
 	@Autowired
@@ -93,6 +95,22 @@ public class ClienteController {
 		response.setData(converter.converterClienteEmClienteDTO(cliente));
 		
 		return ResponseEntity.ok(response);		
+	}
+	
+	@DeleteMapping("/{id}")
+	public ResponseEntity<Response<String>> excluir(@PathVariable Long id) {
+		Response<String> response = new Response<String>();
+		
+		Optional<Cliente> cliente = clienteRepository.findById(id);
+		
+		if(!cliente.isPresent()) {
+			response.getErrors().add("Erro ao excluir cliente. Cliente com código " + id + " não localizado.");
+			return ResponseEntity.badRequest().body(response);
+		}
+		clienteRepository.delete(cliente.get());
+		response.setData(cliente.get().toString());
+		
+		return ResponseEntity.ok(new Response<String>());
 	}
 
 }
