@@ -27,7 +27,7 @@ import com.br.dti.util.converter.Converter;
 @RestController
 @RequestMapping("/api/clientes")
 @CrossOrigin(origins = "*")
-public class ClienteController {
+public class ClienteResource {
 	
 	@Autowired
 	ClienteService clienteService;
