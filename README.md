@@ -9,7 +9,7 @@ Teste prático DTI Digital
   - JPA
   - JUNIT 4
 
-- API CRUD para cadastro de clientes com as seguintes funções:
+- API CRUD de clientes com as seguintes funções:
   - Cadastro de clientes
   - Listagem de todos os clientes
   - Busca de clientes pelo código
