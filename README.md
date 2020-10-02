@@ -16,5 +16,9 @@ Teste prático DTI Digital
   - Atualização de cliente
   - Exclusão de cliente
   
-  **Débito técnico**
+**Instruções para execução**
+  Para executar abra o projeto em uma IDE (STS) como projeto Maven para que as dependências sejam baixadas.
+  
+**Débito técnico**
   Devido ao prazo para entrega (24 horas) não foi possível a implementação dos testes de todas as funcionalidades da API.
+  
