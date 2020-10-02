@@ -17,8 +17,8 @@ Teste prático DTI Digital
   - Exclusão de cliente
   
 **Instruções para execução**
-  Para executar abra o projeto em uma IDE (STS) como projeto Maven para que as dependências sejam baixadas.
+  - Para executar abra o projeto em uma IDE (STS) como projeto Maven para que as dependências sejam baixadas.
   
 **Débito técnico**
-  Devido ao prazo para entrega (24 horas) não foi possível a implementação dos testes de todas as funcionalidades da API.
+  - Devido ao prazo para entrega (24 horas) não foi possível a implementação dos testes de todas as funcionalidades da API.
   
